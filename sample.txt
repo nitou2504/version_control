@@ -1,2 +1,3 @@
 This is a sample text file.
 This is a modified content.
+This is a feature branch change.
