@@ -1,0 +1,8 @@
+# Ignore PNG files in the base folder
+/*.png
+
+# Exclude the images subfolder
+!/images/
+
+# Allow PNG files in the images subfolder
+!/images/*.png
