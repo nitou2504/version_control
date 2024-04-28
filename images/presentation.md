@@ -17,7 +17,19 @@ img[alt~="center"] {
 </style>
 
 
-### Creating a Repository
+### Repository
+
+#### Using a existing repository
+
+If the repository already exists, we need to clone it to our local machine:
+
+
+```bash
+git clone <repository_URL>
+```
+
+---
+#### Create a new repository 
 
 Let's start by creating a new repository and adding some files to it.
 
