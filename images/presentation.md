@@ -98,6 +98,8 @@ Si el repositorio ya existe, necesitamos clonarlo en nuestra máquina local:
 ```bash
 git clone <URL_del_repositorio>
 ```
+(Creamos un repositorio en github con esta guía) ![bg h:450 right](repo.png)
+ 
 
 ---
 #### Crear un nuevo repositorio 
@@ -120,7 +122,7 @@ echo "This is a sample text file." > sample.txt
 ### Realizando Cambios
 Al realizar cambios en los archivos de un repositorio, es importante seguir ciertos pasos para registrar y confirmar esos cambios de manera adecuada. Estos pasos aseguran que los cambios se registren correctamente en el historial del repositorio.
 
-![center w:600 h:300 ](image-20.png)
+![bg right h:320 ](image-20.png)
 
 ---
 
