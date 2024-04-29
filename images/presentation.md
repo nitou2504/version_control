@@ -25,44 +25,43 @@ img[alt~="center"] {
 
 ---
 
+## Control de versiones
+#### ¿Qué es?
 
-### Control de versiones
-####¿Qué es?
+Es una herramienta en el desarrollo del software que te permite registrar cambios en tu archivo a lo largo del tiempo
 
-Es una herramienta en el desarrollo del software que te permite registrar cambios en tu archivo a lo largo del tiempo.
-
-![center](image-25.png)
+![center h:300](image-25.png)
 
 ---
-### Categorías principales
+## Categorías principales
 #### Centralizado
 
-Existe un único repositorio central que almacena toda el proyecto.
+Existe un único repositorio central que almacena toda el proyecto
 
-![center](image-25.png)
+![center h:350](image-26.png)
 
 ---
 #### Distribuido
 
 Cada usuario tiene su propio repositorio local en donde pueden trabajar de forma independiente
 
-![center](image-27.png)
+![center h:360](image-27.png)
 
 ---
 
-### Dos etapas
+## Dos etapas
 #### Working 
-El directorio de trabajo es donde realizas todas las modificaciones a tus archivos.
+El directorio de trabajo es donde realizas todas las modificaciones a tus archivos
 
 #### Staging
-El área de preparación, también conocida como "índice", es un área intermedia donde se registran los cambios antes de confirmarlos realmente en la historia del proyecto. 
+El área de preparación, también conocida como "índice", es un área intermedia donde se registran los cambios antes de confirmarlos realmente en la historia del proyecto
 
 ---
-### Funciones
+## Funciones
 
 #### Seguimiento de cambios
 
-Listado en el que se guarda que usuario ha modificado en el documento.
+Listado en el que se guarda que usuario ha modificado en el documento
 
 #### Historial de versiones
 
@@ -78,11 +77,12 @@ Avisa a los usuarios sobre cualquier modificación que se haya hecho.
 
 Permite detectar que ha sido cambiado de una versión a otra, línea por línea.
 
----
+
 #### Experimentar
 
 Pueden sacar una sección del documento para modificar algo y probar si sirve. Lo puedes guardar o simplemente dejar la anterior versión.
 
+---
 
 ### Repository 
 Un repositorio en Git es un lugar donde se almacenan todos los archivos y carpetas de un proyecto, junto con el historial completo de cambios realizados en esos archivos a lo largo del tiempo. Es como una base de datos que registra todas las modificaciones realizadas en el código fuente de un proyecto.
