@@ -16,8 +16,7 @@ img[alt~="center"] {
 }
 </style>
 
-
-# GRUPO 5
+##### GRUPO 5
 
 ## USO DE HERRAMIENTAS DE CONTROL DE VERSIONES
 
