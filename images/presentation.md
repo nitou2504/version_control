@@ -16,9 +16,9 @@ img[alt~="center"] {
 }
 </style>
 
-##### GRUPO 5
+## GRUPO 5
 
-## USO DE HERRAMIENTAS DE CONTROL DE VERSIONES
+### USO DE HERRAMIENTAS DE CONTROL DE VERSIONES
 
  Martina Vásconez, Sthefano Ulloa, Gabriela Coloma
 
@@ -137,7 +137,7 @@ git status
 git add sample.txt
 git commit -m "Added sample.txt"
 ```
-![center](image-1.png)
+![center h:185](image-1.png)
 
 
 Ahora, modifiquemos el contenido de `sample.txt`. Observa la bandera `-am`, donde `a` agrega los archivos trackeados para el commit.
@@ -161,7 +161,7 @@ Podemos ver el historial de commits para ver nuestros cambios.
 ```bash
 git log
 ```
-![center](image-2.png)
+![center h:380](image-2.png)
 
 ---
 
@@ -170,7 +170,7 @@ Para una vista concisa:
 ```bash
 git log --oneline
 ```
-![center](image-3.png)
+![center h:100](image-3.png)
 
 ---
 Mostrando cambios en un commit con git show.
@@ -178,7 +178,7 @@ Mostrando cambios en un commit con git show.
 ```bash
 git show <commit_hash>
 ```
-![center](image-4.png)
+![center h:450](image-4.png)
 
 ---
 ### Branching
@@ -195,7 +195,7 @@ Creemos una nueva rama para una característica nueva.
 git branch feature_branch
 git checkout feature_branch
 ```
-![center](image-5.png)
+![center h:100](image-5.png)
 
 ---
 Ahora, hagamos algunos cambios en la rama de la característica.
@@ -210,7 +210,7 @@ Cambiemos de nuevo a la rama principal.
 ```bash
 git checkout master
 ```
-![center](image-6.png)
+![center h:100](image-6.png)
 
 ---
 Fusionemos los cambios de la rama de la característica en la rama principal.
@@ -219,12 +219,12 @@ Fusionemos los cambios de la rama de la característica en la rama principal.
 git merge feature_branch
 ```
 
-Observa que el commit de la `feature_branch` ahora está en la rama `master`:
 
-![center](image-7.png)
+
+![center h:480](image-7.png)
 
 ---
-#### Conflicto de Merge
+#### Merge conflict
 
 
 Un conflicto de fusión ocurre cuando Git no puede combinar automáticamente los cambios de dos ramas debido a modificaciones conflictivas en el mismo archivo o línea de código. Es necesario resolver el conflicto manualmente editando el archivo afectado y eligiendo qué cambios mantener. Una vez resuelto el conflicto, se pueden agregar los cambios y confirmar la fusión.
@@ -247,7 +247,7 @@ echo "This is a change in the conflict branch." >> sample.txt
 git commit -am "conflict change in sample.txt"
 ```
 ---
-![center](image-8.png)
+![center h:640](image-8.png)
 
 ---
 Cambiamos de nuevo a la rama principal.
@@ -258,7 +258,7 @@ git checkout master
 
 Observa que el último cambio en `master` fue de la fusión de la rama anterior:
 
-![center](image-9.png)
+![center h:170](image-9.png)
 
 ---
 
@@ -277,19 +277,19 @@ Ahora, intenta fusionar la rama de conflicto en la rama principal.
 git merge conflict_branch
 ```
 
-![center](image-10.png)
+![center h:110](image-10.png)
 
 ---
 Encontrarás un conflicto de fusión. Deberás resolverlo manualmente editando el archivo `muestra.txt`, eliminando los marcadores de conflicto y conservando los cambios deseados. Después de resolver el conflicto, agrega y confirma los cambios:
 
-![center](image-11.png)
+![center h:450](image-11.png)
 
 ---
 ```bash
 git add sample.txt
 git commit -m "Resolve merge conflict"
 ```
-![center](image-12.png)
+![center h:450](image-12.png)
 
 ---
 
@@ -339,7 +339,7 @@ Puedes configurar aliases en tu archivo `~/.gitconfig`:
 git config --global alias.lg "log --oneline"
 ```
 
-![center](image-14.png)
+![center h:240](image-14.png)
 
 ---
 
@@ -347,7 +347,7 @@ git config --global alias.lg "log --oneline"
 
 Crea un archivo `.gitignore` en el directorio raíz de tu repositorio y enumera los archivos o patrones que deseas ignorar. Esto se hace comúnmente para binarios como imágenes, ya que aparecerán en los mensajes de estado:
 
-![center](image-15.png)
+![center h:400](image-15.png)
 
 ---
 
@@ -358,7 +358,7 @@ git add .gitignore
 
 
 
-![center](image-16.png)
+![center h:400](image-16.png)
 
 ---
 
@@ -370,7 +370,7 @@ git add .gitignore
 git commit -am "added gitignore"
 ```
 
-![center](image-17.png)
+![center h:230](image-17.png)
 
 ---
 
@@ -380,7 +380,7 @@ Necesitamos preparar el archivo olvidado (agregarlo al staging) y enmendar el co
 git add README.md
 git commit --amend -m "added gitignore and readme"
 ```
-![center h:270](image-18.png)
+![center h:250](image-18.png)
 
 Así, nuestro último commit fue corregido.
 
@@ -392,3 +392,12 @@ Así, nuestro último commit fue corregido.
 git checkout <hash_del_commit> # Para cambiar a un commit antiguo
 git checkout <nombre_rama> # Para cambiar de nuevo a la rama actual
 ```
+---
+
+### Recursos Útiles
+Guía corta de git
+![h:200](git-guide.png)
+Cheatsheet de git (de Github)
+![h:200](github-git-guide.png)
+
+![bg right h:250](image-28.png)
