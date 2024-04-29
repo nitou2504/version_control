@@ -17,8 +17,21 @@ img[alt~="center"] {
 </style>
 
 
-### Repository
+# GRUPO 5
 
+## USO DE HERRAMIENTAS DE CONTROL DE VERSIONES
+
+ Martina Vásconez, Sthefano Ulloa, Gabriela Coloma
+
+
+
+---
+### Repository 
+Un repositorio en Git es un lugar donde se almacenan todos los archivos y carpetas de un proyecto, junto con el historial completo de cambios realizados en esos archivos a lo largo del tiempo. Es como una base de datos que registra todas las modificaciones realizadas en el código fuente de un proyecto.
+
+![center w:600 h:250 ](image-19.png)
+
+---
 #### Using a existing repository
 
 If the repository already exists, we need to clone it to our local machine:
@@ -47,6 +60,11 @@ echo "This is a sample text file." > sample.txt
 ---
 
 ### Making Changes
+Al realizar cambios en los archivos de un repositorio, es importante seguir ciertos pasos para registrar y confirmar esos cambios de manera adecuada. Estos pasos aseguran que los cambios se registren correctamente en el historial del repositorio.
+
+![center w:600 h:300 ](image-20.png)
+
+---
 
 Next, let's track the changes we made and commit them to the repository.
 
@@ -75,6 +93,11 @@ git commit -am "Modified sample.txt"
 
 ### Viewing History
 
+El historial de un repositorio muestra todos los commits realizados, junto con información sobre quién hizo cada cambio, qué se cambió y cuándo se realizó. Esto permite a los desarrolladores revisar el progreso del proyecto a lo largo del tiempo y entender cómo ha evolucionado el código fuente.
+
+![center w:500 h:250 ](image-21.png)
+
+---
 We can view the commit history to see our changes.
 
 ```bash
@@ -101,6 +124,11 @@ git show <commit_hash>
 
 ---
 ### Branching
+
+Las ramas en Git permiten a los desarrolladores trabajar en nuevas características o experimentos sin afectar el código principal del proyecto. Cada rama representa una línea independiente de desarrollo y puede contener diferentes conjuntos de cambios. Las ramas se utilizan para organizar el trabajo y facilitar la colaboración entre varios miembros del equipo.
+
+![center w:870 h:200 ](image-22.png)
+---
 
 Let's create a new branch for a feature.
 
@@ -138,6 +166,13 @@ Note that the commit from the `feature_branch` is now in the `master` branch:
 
 ---
 #### Merge Conflict
+
+
+Un merge conflict ocurre cuando Git no puede combinar automáticamente los cambios de dos ramas debido a modificaciones conflictivas en el mismo archivo o línea de código. Es necesario resolver el conflicto manualmente editando el archivo afectado y eligiendo qué cambios mantener. Una vez resuelto el conflicto, se pueden agregar los cambios y confirmar la fusión.
+
+![center w:600 h:250 ](image-23.png)
+
+---
 
 To simulate a merge conflict, let's first create a new branch.
 
@@ -198,6 +233,12 @@ git commit -m "Resolve merge conflict"
 ---
 
 ### Remote Repositories
+
+Los repositorios remotos en Git son versiones de un proyecto alojadas en servidores en línea, como GitHub o GitLab. Estos repositorios permiten a los desarrolladores colaborar en un proyecto compartiendo sus cambios de forma remota. 
+
+![center w:600 h:290 ](image-24.png)
+
+---
 
 #### Adding a remote repository with git remote add.
 
