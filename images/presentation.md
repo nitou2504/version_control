@@ -3,7 +3,7 @@ marp: true
 theme: gaia
 _class: lead
 paginate: false
-# backgroundColor: #fff
+backgroundColor: #fff
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 
@@ -16,95 +16,10 @@ img[alt~="center"] {
 }
 </style>
 
-## GRUPO 5
 
-### USO DE HERRAMIENTAS DE CONTROL DE VERSIONES
+### Creating a Repository
 
- Martina Vásconez, Sthefano Ulloa, Gabriela Coloma
-
-
----
-
-### Control de versiones
-#### ¿Qué es?
-
-Es una herramienta en el desarrollo del software que te permite registrar cambios en tu archivo a lo largo del tiempo
-
-![center h:300](image-25.png)
-
----
-### Categorías principales
-#### Centralizado
-
-Existe un único repositorio central que almacena toda el proyecto
-
-![center h:350](image-26.png)
-
----
-#### Distribuido
-
-Cada usuario tiene su propio repositorio local en donde pueden trabajar de forma independiente
-
-![center h:360](image-27.png)
-
----
-
-### Dos etapas
-#### Working 
-El directorio de trabajo es donde realizas todas las modificaciones a tus archivos
-
-#### Staging
-El área de preparación, también conocida como "índice", es un área intermedia donde se registran los cambios antes de confirmarlos realmente en la historia del proyecto
-
----
-### Funciones
-
-#### Seguimiento de cambios
-
-Listado en el que se guarda qué usuario ha modificado en el documento
-
-#### Historial de versiones
-
-Almacena todas las versiones del documento y puedes regresar a cualquiera
-
----
-
-#### Notificación de cambios
-
-Avisa a los usuarios sobre cualquier modificación que se haya hecho. 
-
-#### Comparación de documentos
-
-Permite detectar qué ha sido cambiado de una versión a otra, línea por línea.
-
-
-#### Experimentar
-
-Pueden sacar una sección del documento para modificar algo y probar si sirve. Lo puedes guardar o simplemente dejar la versión anterior.
-
----
-
-### Repositorio 
-Un repositorio en Git es un lugar donde se almacenan todos los archivos y carpetas de un proyecto, junto con el historial completo de cambios realizados en esos archivos a lo largo del tiempo. Es como una base de datos que registra todas las modificaciones realizadas en el código fuente de un proyecto.
-
-![center w:600 h:250 ](image-19.png)
-
----
-#### Utilizando un repositorio existente
-
-Si el repositorio ya existe, necesitamos clonarlo en nuestra máquina local:
-
-
-```bash
-git clone <URL_del_repositorio>
-```
-(Creamos un repositorio en github con esta guía) ![bg h:450 right](repo.png)
- 
-
----
-#### Crear un nuevo repositorio 
-
-Comencemos creando un nuevo repositorio y agregando algunos archivos a él.
+Let's start by creating a new repository and adding some files to it.
 
 ```bash
 mkdir my_project
@@ -112,26 +27,21 @@ cd my_project
 git init
 ```
 
-Ahora, creemos un nuevo archivo de texto y agreguemos algo de contenido.
+Now, let's create a new text file and add some content to it.
 
 ```bash
 echo "This is a sample text file." > sample.txt
 ```
 ---
 
-### Realizando Cambios
-Al realizar cambios en los archivos de un repositorio, es importante seguir ciertos pasos para registrar y confirmar esos cambios de manera adecuada. Estos pasos aseguran que los cambios se registren correctamente en el historial del repositorio.
+### Making Changes
 
-![bg right h:320 ](image-20.png)
-
----
-
-A continuación, hagamos un seguimiento de los cambios que hicimos y los confirmemos en el repositorio.
+Next, let's track the changes we made and commit them to the repository.
 
 ```bash
 git status
 ```
-![center h:340](image.png)
+![center](image.png)
 
 ---
 
@@ -139,10 +49,10 @@ git status
 git add sample.txt
 git commit -m "Added sample.txt"
 ```
-![center h:185](image-1.png)
+![center](image-1.png)
 
 
-Ahora, modifiquemos el contenido de `sample.txt`. Observa la bandera `-am`, donde `a` agrega los archivos trackeados para el commit.
+Now, let's modify the content of `sample.txt`. Note the flag `-am`, where `a` adds the tracked files for the commit.
 
 ```bash
 echo "This is a modified content." >> sample.txt
@@ -151,165 +61,137 @@ git commit -am "Modified sample.txt"
 
 ---
 
-### Visualización del Historial
+### Viewing History
 
-El historial de un repositorio muestra todos los commits realizados, junto con información sobre quién hizo cada cambio, qué se cambió y cuándo se realizó. Esto permite a los desarrolladores revisar el progreso del proyecto a lo largo del tiempo y entender cómo ha evolucionado el código fuente.
-
-![center w:500 h:250 ](image-21.png)
-
----
-Podemos ver el historial de commits para ver nuestros cambios.
+We can view the commit history to see our changes.
 
 ```bash
 git log
 ```
-![center h:380](image-2.png)
+![center](image-2.png)
 
 ---
 
-Para una vista concisa:
+For a concise view:
 
 ```bash
 git log --oneline
 ```
-![center h:100](image-3.png)
+![center](image-3.png)
 
 ---
-Mostrando cambios en un commit con git show.
+Displaying changes in a commit with git show.
 
 ```bash
 git show <commit_hash>
 ```
-![center h:450](image-4.png)
+![center](image-4.png)
 
 ---
 ### Branching
 
-Las ramas en Git permiten a los desarrolladores trabajar en nuevas características o experimentos sin afectar el código principal del proyecto. Cada rama representa una línea independiente de desarrollo y puede contener diferentes conjuntos de cambios. Las ramas se utilizan para organizar el trabajo y facilitar la colaboración entre varios miembros del equipo.
-
-![center w:870 h:200 ](image-22.png)
-
----
-
-Creemos una nueva rama para una característica nueva.
+Let's create a new branch for a feature.
 
 ```bash
 git branch feature_branch
 git checkout feature_branch
 ```
-![center h:100](image-5.png)
+![center](image-5.png)
 
 ---
-Ahora, hagamos algunos cambios en la rama de la característica.
+Now, let's make some changes in the feature branch.
 
 ```bash
 echo "This is a feature branch change." >> sample.txt
 git commit -am "Feature branch change in sample.txt"
 ```
 
-Cambiemos de nuevo a la rama principal.
+Switch back to the main branch.
 
 ```bash
 git checkout master
 ```
-![center h:100](image-6.png)
+![center](image-6.png)
 
 ---
-Fusionemos los cambios de la rama de la característica en la rama principal.
+Merge the changes from the feature branch into the main branch.
 
 ```bash
 git merge feature_branch
 ```
 
-
-
-![center h:480](image-7.png)
-
----
-#### Merge conflict
-
-
-Un conflicto de fusión ocurre cuando Git no puede combinar automáticamente los cambios de dos ramas debido a modificaciones conflictivas en el mismo archivo o línea de código. Es necesario resolver el conflicto manualmente editando el archivo afectado y eligiendo qué cambios mantener. Una vez resuelto el conflicto, se pueden agregar los cambios y confirmar la fusión.
-
-![center w:600 h:250 ](image-23.png)
+Note that the commit from the `feature_branch` is now in the `master` branch:
+![center](image-7.png)
 
 ---
+#### Merge Conflict
 
-Para simular un conflicto de fusión, primero creemos una nueva rama.
+To simulate a merge conflict, let's first create a new branch.
 
 ```bash
 git branch conflict_branch
 git checkout conflict_branch
 ```
 
-Ahora, modifiquemos `sample.txt` en la rama de conflicto.
+Now, let's modify `sample.txt` in the conflict branch.
 
 ```bash
 echo "This is a change in the conflict branch." >> sample.txt
 git commit -am "conflict change in sample.txt"
 ```
 ---
-![center h:640](image-8.png)
+![center](image-8.png)
 
 ---
-Cambiamos de nuevo a la rama principal.
+Switch back to the main branch.
 
 ```bash
 git checkout master
 ```
 
-Observa que el último cambio en `master` fue de la fusión de la rama anterior:
+Note that the last change in the `master` was from the previous branch merge:
 
-![center h:170](image-9.png)
+![center](image-9.png)
 
 ---
 
-Ahora
-
-, modifiquemos la misma línea en `sample.txt` en la rama principal.
+Now, let's modify the same line in `sample.txt` in the main branch.
 
 ```bash
 echo "This is a conflicting change in the main branch." >> sample.txt
 git commit -am "conflict change (master) in sample.txt"
 ```
 
-Ahora, intenta fusionar la rama de conflicto en la rama principal.
+Now, try to merge the conflict branch into the main branch.
 
 ```bash
 git merge conflict_branch
 ```
-
-![center h:110](image-10.png)
+![center](image-10.png)
 
 ---
-Encontrarás un conflicto de fusión. Deberás resolverlo manualmente editando el archivo `muestra.txt`, eliminando los marcadores de conflicto y conservando los cambios deseados. Después de resolver el conflicto, agrega y confirma los cambios:
+You'll encounter a merge conflict. You'll need to manually resolve it by editing the `sample.txt` file, removing the conflict markers, and keeping the desired changes. After resolving the conflict, add and commit the changes:
 
-![center h:450](image-11.png)
+![center](image-11.png)
 
 ---
 ```bash
 git add sample.txt
 git commit -m "Resolve merge conflict"
 ```
-![center h:450](image-12.png)
+![center](image-12.png)
 
 ---
 
-### Repositorios Remotos
+### Remote Repositories
 
-Los repositorios remotos en Git son versiones de un proyecto alojadas en servidores en línea, como GitHub o GitLab. Estos repositorios permiten a los desarrolladores colaborar en un proyecto compartiendo sus cambios de forma remota. 
-
-![center w:600 h:290 ](image-24.png)
-
----
-
-#### Agregar un repositorio remoto con git remote add.
+#### Adding a remote repository with git remote add.
 
 ```bash
-git remote add origin <URL_del_repositorio>
+git remote add origin <repository_URL>
 ```
 
-Si ya tienes cambios en tu git local y quieres enviarlos a un nuevo repositorio remoto vacío:
+If you already have changes in your local git and want to push them to a new empty remote repo:
 
 ```bash
 git push -u origin master
@@ -318,38 +200,38 @@ git push -u origin master
 ![center](image-13.png)
 
 
-#### Enviar cambios a un repositorio remoto con git push.
+#### Pushing changes to a remote repository with git push.
 
 ```bash
-git push origin <nombre_rama>
+git push origin <branch_name>
 ```
 
-#### Traer cambios de un repositorio remoto con git pull.
+#### Pulling changes from a remote repository with git pull.
 
 ```bash
-git pull origin <nombre_rama>
+git pull origin <branch_name>
 ```
 
 ---
-### Consejos y Trucos Útiles
+### Useful Tips and Tricks
 
-#### Alias para comandos comunes.
+#### Aliases for common commands.
 
-Puedes configurar aliases en tu archivo `~/.gitconfig`:
+You can set up aliases in your `~/.gitconfig` file:
 
 ```bash
 git config --global alias.lg "log --oneline"
 ```
 
-![center h:240](image-14.png)
+![center](image-14.png)
 
 ---
 
-#### Usar .gitignore para ignorar archivos.
+#### Using .gitignore to ignore files.
 
-Crea un archivo `.gitignore` en el directorio raíz de tu repositorio y enumera los archivos o patrones que deseas ignorar. Esto se hace comúnmente para binarios como imágenes, ya que aparecerán en los mensajes de estado:
+Create a `.gitignore` file in your repository's root directory and list the files or patterns you want to ignore. This is commonly done for binaries such as images, since they will appear on status messages:
 
-![center h:400](image-15.png)
+![center](image-15.png)
 
 ---
 
@@ -360,46 +242,37 @@ git add .gitignore
 
 
 
-![center h:400](image-16.png)
+![center](image-16.png)
 
 ---
 
-#### Arreglar el último commit con `amend`
+#### Fix last commit with `amend`
 
-`--amend` es una bandera útil para usar cuando hacemos un commit pero olvidamos agregar archivos o cambios (o corregir errores tipográficos en el mensaje de commit). Por ejemplo, olvidamos agregar el README.md en nuestro último commit:
+`--amend` is a useful flag to use when we make a commit but we forgot to add files or changes (or fix typos in the commit message). For example, we forgot to add the README.md in our last commit:
 
 ```bash
 git commit -am "added gitignore"
 ```
 
-![center h:230](image-17.png)
+![center](image-17.png)
 
 ---
 
-Necesitamos preparar el archivo olvidado (agregarlo al staging) y enmendar el commit:
+We need to stage the forgotten file, and ammend the commit:
 
 ```bash
 git add README.md
 git commit --amend -m "added gitignore and readme"
 ```
-![center h:250](image-18.png)
+![center](image-18.png)
 
-Así, nuestro último commit fue corregido.
+Thus, our last commit was fixed.
 
 ---
 
-#### Saltar entre versiones antiguas y actuales con checkout `<hash_del_commit>` y checkout `<nombre_rama>`.
+#### Jumping between old and current versions with checkout `<commit>` and checkout `<HEAD>`.
 
 ```bash
-git checkout <hash_del_commit> # Para cambiar a un commit antiguo
-git checkout <nombre_rama> # Para cambiar de nuevo a la rama actual
+git checkout <commit_hash> # To switch to an old commit
+git checkout <branch_name> # To switch back to the current branch
 ```
----
-
-### Recursos Útiles
-Guía corta de git
-![h:200](git-guide.png)
-Cheatsheet de git (de Github)
-![h:200](github-git-guide.png)
-
-![bg right h:250](image-28.png)
